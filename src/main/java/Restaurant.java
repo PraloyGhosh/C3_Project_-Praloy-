@@ -69,5 +69,10 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderValue(ArrayList<Item> orderItems){
+        int orderValue = orderItems.stream().mapToInt(item -> item.getPrice()).sum();
+        return orderValue;
+    }
+
 
 }
